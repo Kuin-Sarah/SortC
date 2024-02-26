@@ -1,0 +1,17 @@
+vector<int> insertionSort() {
+    vector<int> sortedVector;
+
+    int size = myVector.size();
+    for(auto i = 0; i < size; i++) {
+        int index = -1;
+        for (auto j = 0; j < sortedVector.size(); j++) {
+            if (sortedVector[j] > myVector[i]) {
+                index = j;
+                break;
+            }
+        }
+        if (index != -1) sortedVector.insert(sortedVector.begin()+index, myVector[i]);
+        else sortedVector.push_back(myVector[i]);
+    }
+    return sortedVector;
+}
