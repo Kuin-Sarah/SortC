@@ -1,0 +1,11 @@
+vector<int> bubbleSort() {
+    vector<int> sortedVector(myVector);
+    int size = sortedVector.size();
+    for(auto i = 0; i < size; i++) {
+        for (auto j = 0; j < (size - i - 1); j++) {
+            if (sortedVector[j] > sortedVector[j + 1]) {
+                swap(sortedVector[j],sortedVector[j+1]);
+            }   
+        }
+    }
+    return sortedVector;
